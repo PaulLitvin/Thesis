@@ -56,13 +56,11 @@ window.addEventListener('DOMContentLoaded', function () {
         statusMessage = document.createElement('div');
 
         inputPopupForm.forEach((element) => {
-            let regExp = new RegExp();
-            regExp = /[0-9]/gi;
             element.addEventListener('input', function (event) {
                 if (element.name === "user_phone") {
-                    if (event.data.match(regExp) == undefined) {
+                    if ( isNaN(event.data)) {
                         element.value = '';
-                    } else {}
+                    } 
                 } 
             });
         });
@@ -121,4 +119,33 @@ window.addEventListener('DOMContentLoaded', function () {
 
         });
 
+        //Calc
+
+        //Popup Calculator
+        let popupCalc = document.querySelector('.popup_calc'),
+            popupCalcBtn = document.querySelectorAll('.popup_calc_btn'),
+            popupCalcClose = document.querySelector('.popup_calc_close');
+
+        popupCalcBtn.forEach(element =>
+            element.addEventListener('click', function (event) {
+                event.preventDefault();
+                popupCalc.style.display = "block";
+            })
+        )
+    
+        popupCalcClose.addEventListener('click', function () {
+                popupCalc.style.display = 'none';
+            });
+    
+        popupCalc.addEventListener('click', function (event) {
+            if (event.target.className == 'popup_calc') {
+                popupCalc.style.display = 'none';
+            }
+        });
+
+        //Calculator prevue
+
+        let balconIcons = document.getElementsByClassName('balcon_icons')[0],
+            p = balconIcons.querySelectorAll('a');
+        
 });
