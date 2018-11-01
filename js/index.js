@@ -1,23 +1,46 @@
-window.addEventListener('DOMContentLoaded', function (){
-    // Modal 
+window.addEventListener('DOMContentLoaded', function () {
+    // Modal popup_engineer
 
     let popapEngineerBtn = document.querySelector('.popup_engineer_btn'),
         popupEngineer = document.querySelector('.popup_engineer'),
-        popupEnginnerClose = document.querySelectorAll('.popup_close');
-        
-        popapEngineerBtn.addEventListener('click', function(){
-            popupEngineer.style.display = 'block';
-        });
+        popupEngeneerClose = document.querySelectorAll('.popup_close');
 
-        popupEnginnerClose.forEach( element =>
-           element.addEventListener('click', function(){
-                popupEngineer.style.display = 'none';
+    popapEngineerBtn.addEventListener('click', function () {
+        popupEngineer.style.display = 'block';
+    });
+
+    popupEngeneerClose.forEach(element =>
+        element.addEventListener('click', function () {
+            popupEngineer.style.display = 'none';
         }));
 
-        popupEngineer.addEventListener('click', function(event){
-                 if(event.target.className == 'popup_engineer'){
-                    popupEngineer.style.display = 'none';
-                 }
-         });
-});
+    popupEngineer.addEventListener('click', function (event) {
+        if (event.target.className == 'popup_engineer') {
+            popupEngineer.style.display = 'none';
+        }
+    });
 
+    // Modal popup
+    let popupPhoneLink = document.querySelectorAll('.phone_link'),
+        popup = document.querySelector('.popup');
+        popupClose = document.querySelectorAll('.popup_close');
+
+    popupPhoneLink.forEach(element =>
+        element.addEventListener('click', function (event) {
+            event.preventDefault();
+            popup.style.display = "block";
+        })
+    )
+
+    popupClose.forEach(element =>
+        element.addEventListener('click', function () {
+            popup.style.display = 'none';
+        }));
+
+    popup.addEventListener('click', function (event) {
+        if (event.target.className == 'popup') {
+            popup.style.display = 'none';
+        }
+    });
+
+});
