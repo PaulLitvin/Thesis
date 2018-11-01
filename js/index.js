@@ -71,7 +71,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 event.preventDefault();
                 element.appendChild(statusMessage);
                 let formData = new FormData(element);
-                console.log(element)
+                
     
                 function postData(data) {
     
