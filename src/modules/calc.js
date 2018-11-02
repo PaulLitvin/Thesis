@@ -66,9 +66,6 @@ function calc() {
         })
     );
 
-    popupCalcBtn.addEventListener('click', function () {
-
-    })
 
 
 
