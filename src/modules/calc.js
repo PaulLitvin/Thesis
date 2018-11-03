@@ -103,7 +103,6 @@ function calc() {
        
     });
 
-<<<<<<< HEAD
     //Checked only one checkbox
 
     customCheckbox.forEach((element, i) => 
@@ -122,13 +121,6 @@ function calc() {
         })
     );
  
-=======
-
-
-
-
-
->>>>>>> 714698861dbda91f14565549e6c017a1d04e4628
 }
 
 module.exports = calc;
