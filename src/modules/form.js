@@ -1,5 +1,6 @@
-function form() {
 
+function form() {
+   
     let message = {
         loading: 'Идет отправка',
         success: 'Отправлено!',
@@ -29,7 +30,7 @@ function form() {
             let formData = new FormData(element);
 
             function postData(data) {
-
+               
                 return new Promise(function (resolve, reject) {
                     let request = new XMLHttpRequest();
 
@@ -72,6 +73,7 @@ function form() {
                 .then(clearInput);
         });
     });
+
 }
 
 module.exports = form;

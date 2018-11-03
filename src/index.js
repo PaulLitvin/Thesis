@@ -4,12 +4,14 @@ window.addEventListener('DOMContentLoaded', function () {
 
     let popup = require('./modules/popup.js'),
         form = require('./modules/form.js'),
-        calc = require('./modules/calc.js');
+        calc = require('./modules/calc.js'),
+        tabs = require('./modules/tabs.js');
         
-        
+       
         popup();
         form();
         calc();
+        tabs();
        
 
 
