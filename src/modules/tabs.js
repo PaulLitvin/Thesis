@@ -39,16 +39,14 @@ function tabs() {
     let tabDecoration = document.querySelectorAll('.decoration_item'),
         decoration = document.querySelector('.decoration'),
         decorationContentItem = document.querySelectorAll('.decoration_content_item');
-
     function hideTabDecorationContent(a) {
-        for (let i = a; i < tabDecoration.length; i++) {
+        for (let i = a; i < tabDecoration.length ; i++) {
             tabDecoration[i].children[0].classList.remove('after_click');
             decorationContentItem[i].style.display = 'none';
         }
     }
-
     hideTabDecorationContent(1);
-
+    
     function tabDecorationActive(i) {
         if (!tabDecoration[i].children[0].classList.contains('after_click')) {
             tabDecoration[i].children[0].classList.add('after_click');
@@ -56,7 +54,7 @@ function tabs() {
         }
 
     }
-
+    
     decoration.addEventListener('click', function (event) {
         let target = event.target;
         if (target.parentNode.classList.contains('decoration_item') || target.parentNode.classList.contains('no_click')) {

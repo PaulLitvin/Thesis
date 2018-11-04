@@ -7,7 +7,7 @@
     <link rel="icon" href="/favicon.ico">
     <title>Ирвас окна</title>
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="less/style.css" rel="stylesheet">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
     <!-- Slick Slider -->
@@ -711,7 +711,37 @@
             <h2 class="sale_title">Акция - 60%</h2>
             <p class="sale_subtitle">Успей сэкономить на остеклении! Только до 4 июля!</p>
             <div class="timer">
-              <div class="eTimer"></div>
+              <p>До завершения акции:</p>
+              <div class="eTimer">
+              <div class="timer-row">
+                  <div class="days">
+                    <div class="days1 date"></div>
+                    <div class="days2 date"></div>
+                  </div>
+                  <p>Дней</p>
+              </div>
+              <div class="timer-row">
+                  <div class="hours">
+                      <div class="hours1 date"></div>
+                      <div class="hours2 date"></div>
+                  </div>
+                  <p>Часов</p>
+              </div>
+              <div class="timer-row ">
+                  <div class="minutes">
+                      <div class="minutes1 date"></div>
+                      <div class="minutes2 date"></div>
+                  </div>
+                  <p>Минут</p>
+              </div>
+              <div class="timer-row">
+                  <div class="seconds">
+                      <div class="seconds1 date"></div>
+                      <div class="seconds2 date"></div>
+                  </div>
+                  <p>Секунд</p>
+              </div>
+              </div>
             </div>
           </div>
           <div class="col-lg-4 col-lg-offset-3 col-md-5 col-md-offset-1 col-sm-8 col-sm-offset-2 wow fadeInRight">
