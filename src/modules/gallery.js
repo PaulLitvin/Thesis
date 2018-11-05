@@ -16,7 +16,6 @@ function gallery() {
     function imgSetAttributes(event) {
         img.classList.add('gallery-img');
         img.setAttribute('src', event.target.parentNode.attributes[0].value);
-
     }
 
     function showImg() {
