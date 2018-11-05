@@ -485,19 +485,26 @@ a, button, input, textarea {
 	img {
 		margin-bottom: 3rem;
 	}
-	a[data-fancybox="gallery"] .lupa {
-		position: absolute;
-		top: 0;
-		left: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		top: 40%;
-		opacity: 0;
-		transition: ease 0.2s;
-	}
-	a[data-fancybox="gallery"]:hover .lupa {
-		opacity: 1;
-	}
+	
+}
+
+.gallery{
+	display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+	background-color: rgba(0, 0, 0, 0.5);
+	overflow: scroll;
+}
+.gallery-img{
+	position: absolute;
+    top: 10%;
+    left: 50%;
+	transform: translateX(-50%);
+	
 }
 
 /*Guarantees*/

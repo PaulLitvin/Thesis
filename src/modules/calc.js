@@ -103,10 +103,8 @@ function calc() {
        
     });
 
-<<<<<<< HEAD
 
-=======
->>>>>>> dd2a3e239df1e21130b186a498ba66cd0e65f177
+
     //Checked only one checkbox
 
     customCheckbox.forEach((element, i) => 
@@ -125,10 +123,6 @@ function calc() {
         })
     );
  
-<<<<<<< HEAD
-
-=======
->>>>>>> dd2a3e239df1e21130b186a498ba66cd0e65f177
 }
 
 module.exports = calc;
