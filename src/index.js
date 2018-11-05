@@ -14,12 +14,5 @@ window.addEventListener('DOMContentLoaded', function () {
         calc();
         tabs();
         timer();
-        gallery();
-       
-
-
-    //Form
-    //Calc
-    //Popup Calculator
-           
+        gallery();           
 });

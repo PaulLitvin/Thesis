@@ -48,7 +48,6 @@ function calc() {
                 }
             });
 
-           
         });
 
     });
@@ -122,7 +121,7 @@ function calc() {
             }
         })
     );
- 
+  
 }
 
 module.exports = calc;
