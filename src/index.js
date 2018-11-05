@@ -9,12 +9,14 @@ window.addEventListener('DOMContentLoaded', function () {
         timer = require('./modules/timer.js'),
         gallery = require('./modules/gallery.js');
        
+       
         popup();
         form();
         calc();
         tabs();
         timer();
-        gallery();           
+        gallery(); 
+              
 });
 
 

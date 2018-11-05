@@ -18,8 +18,7 @@ function timer() {
     }
 
     function setClock(endtime) {
-        let timer = document.querySelector('.eTimer'),
-            days1 = document.querySelector('.days1'),
+        let days1 = document.querySelector('.days1'),
             days2 = document.querySelector('.days2'),
             hours1 = document.querySelector('.hours1'),
             hours2 = document.querySelector('.hours2'),

@@ -1,6 +1,7 @@
+let objCalc = require('./calc.js');
 
 function form() {
-   
+
     let message = {
         loading: 'Идет отправка',
         success: 'Отправлено!',
@@ -30,18 +31,20 @@ function form() {
             let formData = new FormData(element);
 
             function postData(data) {
-               
+
                 return new Promise(function (resolve, reject) {
+
+                    let objC = objCalc();
                     let request = new XMLHttpRequest();
 
                     request.open('POST', 'server.php');
                     request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
 
-                    let obj = {};
+
                     formData.forEach(function (value, key) {
-                        obj[key] = value;
+                        objC[key] = value;
                     });
-                    let json = JSON.stringify(obj);
+                    let json = JSON.stringify(objC);
 
                     request.onreadystatechange = function () {
                         if (request.readyState < 4) {
@@ -55,6 +58,9 @@ function form() {
                         }
                     };
                     request.send(json);
+                    Object.keys(objC).forEach(function (key) {
+                        delete objC[key];
+                    });
                 });
             }
 
@@ -73,7 +79,6 @@ function form() {
                 .then(clearInput);
         });
     });
-
 }
 
 module.exports = form;
