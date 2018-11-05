@@ -14,10 +14,8 @@ window.addEventListener('DOMContentLoaded', function () {
         calc();
         tabs();
         timer();
-<<<<<<< HEAD
         gallery();           
 });
-=======
-        gallery();
-});
->>>>>>> a81ccc4d5ea175d798d13b8fdff70464d54d4c7c
+
+
+

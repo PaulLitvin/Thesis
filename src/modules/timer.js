@@ -5,7 +5,7 @@ function timer() {
         let t = Date.parse(endtime) - Date.parse(new Date()),
             seconds = Math.floor((t / 1000) % 60),
             minutes = Math.floor((t / 1000 / 60) % 60),
-            hours = Math.round((t / (1000 * 60 * 60)) % 24 ),
+            hours = Math.ceil((t / (1000 * 60 * 60))%24),
             days = Math.floor((t / (1000 * 60 * 60 * 24)));
 
         return {
