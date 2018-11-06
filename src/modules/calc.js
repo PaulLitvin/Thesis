@@ -14,28 +14,28 @@ function calc() {
 
     //Calculator prevue 
 
-    let balconIcons = document.getElementsByClassName('balcon_icons')[0],
-        balconImages = balconIcons.querySelectorAll('a'),
+    let balconyIcons = document.getElementsByClassName('balcon_icons')[0],
+        balconyImages = balconyIcons.querySelectorAll('a'),
         bigImgClass = document.getElementsByClassName('big_img')[0],
         bigImg = bigImgClass.querySelectorAll('img');
 
-    balconImages.forEach((element, i) => {
+    balconyImages.forEach((element, i) => {
         if (element.classList.contains('type1')) {
-            objectCalc.balcon = 'type1';
+            objectCalc.balcony = 'type1';
         }
         element.addEventListener('click', function (event) {
             event.preventDefault();
 
             if (element.classList.contains('type' + (i + 1))) {
-                objectCalc.balcon = 'type' + (i + 1);
+                objectCalc.balcony = 'type' + (i + 1);
             }
 
-            for (let j = 0; j < balconImages.length; j++) {
+            for (let j = 0; j < balconyImages.length; j++) {
                 if (j == i) {
                     element.children[0].style.width = '25%';
                 }
                 if (j != i) {
-                    balconImages[j].children[0].style.width = '20%';
+                    balconyImages[j].children[0].style.width = '20%';
                 }
             }
 
