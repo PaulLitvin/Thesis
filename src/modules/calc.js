@@ -105,9 +105,10 @@ function calc() {
     });
 
     popupCalcButton.addEventListener('click', function () {
-        popupCalc.style.display = 'none';
-        popupCalcProfile.style.display = 'block';
-
+        if(objectCalc.width != undefined && objectCalc.width != ""  && objectCalc.height != undefined && objectCalc.height != ""){
+                popupCalc.style.display = 'none';
+             popupCalcProfile.style.display = 'block';
+        }
     });
 
     popupCalcProfileButton.addEventListener('click', function () {
