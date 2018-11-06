@@ -1,5 +1,5 @@
 function gallery() {
-    let worksImg = document.querySelectorAll('.works-img'),
+    let worksImg = document.querySelectorAll('.fadeIn'),
         img = document.createElement('img');
         gallaryBlock = document.createElement('div');
         gallaryBlock.classList.add('gallery');
@@ -7,9 +7,12 @@ function gallery() {
 
     worksImg.forEach((element) => {
         element.addEventListener('click', function (event) {
-            event.preventDefault();
-            imgSetAttributes(event);
-            showImg();
+            if(event.target.classList.contains('works-img') || event.target.classList.contains('lupa')){
+                event.preventDefault();
+                imgSetAttributes(event);
+                showImg();
+            }
+            
         });
     });
 

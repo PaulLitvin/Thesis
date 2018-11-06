@@ -8,11 +8,11 @@ function calc() {
     popupCalcBtn.forEach(element =>
         element.addEventListener('click', function (event) {
             event.preventDefault();
-            popupCalc.style.display = "block";
+            popupCalc.style.display = 'block';
         })
     );
 
-    //Calculator prevue
+    //Calculator prevue 
 
     let balconIcons = document.getElementsByClassName('balcon_icons')[0],
         balconImages = balconIcons.querySelectorAll('a'),
@@ -85,7 +85,7 @@ function calc() {
         element.addEventListener('input', function () {
 
             if (element.id == 'width' || element.id == 'height') {
-                if (isNaN(element.value)) {
+                if (isNaN(element.value) || element.value == 0) {
                     element.value = '';
                 }
 

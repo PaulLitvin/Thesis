@@ -519,6 +519,10 @@ textarea:focus {
 .works img {
   margin-bottom: 3rem;
 }
+.fadeIn:hover .lupa {
+  position: relative;
+  top: 200px;
+}
 .gallery {
   display: none;
   position: fixed;
